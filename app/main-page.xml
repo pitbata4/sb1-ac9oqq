@@ -1,0 +1,4 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="bg-purple-50">
+    <ActionBar title="Magic Labyrinth" class="bg-purple-800 text-white"/>
+    <game:GameBoard xmlns:game="game/components"/>
+</Page>

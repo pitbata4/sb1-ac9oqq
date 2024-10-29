@@ -1,0 +1,18 @@
+<GridLayout xmlns="http://schemas.nativescript.org/tns.xsd" rows="auto, *, auto">
+    <!-- Status Bar -->
+    <StackLayout row="0" class="p-2 bg-purple-800">
+        <Label text="{{ 'Current Player: ' + (currentPlayer + 1) }}" class="text-white text-lg"/>
+        <Label text="{{ 'Artifacts: P1(' + players[0].artifacts + ') P2(' + players[1].artifacts + ')' }}" class="text-white"/>
+    </StackLayout>
+
+    <!-- Game Board -->
+    <GridLayout row="1" id="gameBoard" class="m-2" loaded="{{ onBoardLoaded }}">
+        <!-- Board cells are created dynamically -->
+    </GridLayout>
+
+    <!-- Controls -->
+    <GridLayout row="2" columns="*, *" class="p-2">
+        <Button col="0" text="Roll Die" tap="{{ onRollDie }}" class="bg-purple-600 text-white"/>
+        <Label col="1" text="{{ 'Moves: ' + currentMoves }}" class="text-xl text-center"/>
+    </GridLayout>
+</GridLayout>
